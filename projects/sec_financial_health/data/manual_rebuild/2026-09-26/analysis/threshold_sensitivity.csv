@@ -1,0 +1,9 @@
+weighting,threshold,eligible_banks,review_banks,unscored_banks
+composite_stress_score,65,148,18,11
+composite_stress_score,70,148,5,11
+composite_stress_score,75,148,2,11
+composite_stress_score,80,148,0,11
+funding_weight_score,65,148,21,11
+funding_weight_score,70,148,9,11
+funding_weight_score,75,148,4,11
+funding_weight_score,80,148,1,11

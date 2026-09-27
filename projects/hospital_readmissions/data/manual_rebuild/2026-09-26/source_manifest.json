@@ -1,0 +1,18 @@
+{
+  "source_url": "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/9n3s-kdb3",
+  "snapshot_date": "2026-09-26",
+  "responses": [
+    {
+      "url": "https://data.cms.gov/provider-data/api/1/metastore/schemas/dataset/items/9n3s-kdb3",
+      "sha256": "d5dd538630f79241f3ffbe110bca838b3b20a51d8ffd2251a3382e2c3b8b76bb",
+      "bytes": 1828,
+      "accessed_at": "2026-09-26T04:57:05.984062+00:00"
+    },
+    {
+      "url": "https://data.cms.gov/provider-data/sites/default/files/resources/a171bc36c488d3e0dc33ec63abb469a6_1770163617/FY_2026_Hospital_Readmissions_Reduction_Program_Hospital.csv",
+      "sha256": "7e7915dd2751a1e59ac46dbc9194fb781e820962a04d47c31344ea2bb30c91f6",
+      "bytes": 2068464,
+      "accessed_at": "2026-09-26T04:57:06.660159+00:00"
+    }
+  ]
+}

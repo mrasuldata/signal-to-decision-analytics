@@ -1,0 +1,13 @@
+# 01 Consumer Complaints
+
+The [packaged Tableau complaint-review workbook](tableau/01_consumer_complaints.twbx) uses the pinned 2026-09-26 extract. Open it after running the manual notebook's Source → Check stages and compare its full-cohort count (6,558) and timely-response rate (98.80%). Dashboard filters change selected views; the full-cohort figures are fixed snapshot references. The workbook is not a live publisher feed.
+
+Source: [CFPB Consumer Complaint Database API](https://cfpb.github.io/ccdb5-api/documentation/). The pinned publisher CSV was acquired 2026-09-26 using Mortgage, PA/VA/MD/DC/NJ, and 2024-01-01 through 2025-12-31. The API returned five 2026-01-01 rows at the stated maximum; the visible Import cell excludes them and displays that count. It normalizes UTC timestamps to calendar dates. The resulting verified cohort has **6,558** complaint IDs.
+
+Open [the manual notebook](notebooks/manual_lineage.ipynb) from the portfolio folder. Inspect each Source → Import → Transform and clean → Calculate → Check → Save → Show → Decide stage before advancing. The raw CSV and SHA-256 metadata are in `data/raw/publisher_responses/`; the pinned digest is shown directly in the Source cell. The verified 2026-09-26 extract, quality report, source manifest, and `response_queue_intervals.csv` are in `data/manual_rebuild/2026-09-26/`.
+
+Calculation: the response queue groups company, product, and calendar month; computes known-response timely rates and Wilson intervals; and flags only sufficiently observed months below a 95% timely-response target. A persistent signal requires adjacent calendar months. The supplied portfolio referenced a queue Python module that was not included; this notebook implements the queue visibly from the supplied [SQL rule](sql/analysis.sql). The notebook also saves the existing generic diagnostics. The `Show` stage displays the interval queue. A decision must cite the response date, queue file, checks, and a limitation.
+
+After the notebook's Check and Save stages, the [manual MySQL handoff](sql/README.md) runs `schema.sql`, `populate.sql`, `validation.sql`, then `analysis.sql` in Workbench. The table mirrors the checked extract and the existing SQL cross-check; it does not replace notebook calculations. MySQL is needed to demonstrate this SQL step, not to generate the analytical results or open the saved dashboard.
+
+Limits: published complaints are not a representative sample of consumers or lender market share. Complaint volume is not a prevalence rate. The review signal is a screening scenario, not a validated risk probability. Recent complaints can be subject to publication lag and taxonomy changes. Missing dispute information is not imputed as “No.”

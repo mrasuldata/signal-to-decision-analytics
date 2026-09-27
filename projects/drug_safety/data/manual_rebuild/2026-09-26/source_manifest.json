@@ -1,0 +1,18 @@
+{
+  "source_url": "https://api.fda.gov/drug/shortages.json",
+  "snapshot_date": "2026-09-26",
+  "responses": [
+    {
+      "url": "https://api.fda.gov/drug/shortages.json?limit=1000&skip=0",
+      "sha256": "8e0cda58e3b53046e11f73919c060911cca841ed4d848eb684d7709a3f33fd99",
+      "bytes": 1900492,
+      "accessed_at": "2026-09-26T04:56:47.712670+00:00"
+    },
+    {
+      "url": "https://api.fda.gov/drug/shortages.json?limit=1000&skip=1000",
+      "sha256": "3b35adcfba6cda8d40587a9d3b9bda1995aa183233b0dd29d930bd3f73ae1264",
+      "bytes": 1159424,
+      "accessed_at": "2026-09-26T04:56:48.969245+00:00"
+    }
+  ]
+}

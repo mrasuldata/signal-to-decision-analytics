@@ -1,0 +1,16 @@
+{
+  "project": "07_electricity_affordability",
+  "sample_mode": false,
+  "artifacts": {
+    "data_audit": 5,
+    "segment_scorecard": 5,
+    "bootstrap_gap": 1,
+    "feature_diagnostics": 12,
+    "temporal_diagnostics": 55,
+    "threshold_sensitivity": 5,
+    "decision_queue": 20,
+    "growth_scenarios": 15,
+    "monthly_pressure_signals": 275,
+    "persistence_sensitivity": 15
+  }
+}

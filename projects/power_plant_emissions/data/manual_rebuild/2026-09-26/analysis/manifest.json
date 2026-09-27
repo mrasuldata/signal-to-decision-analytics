@@ -1,0 +1,15 @@
+{
+  "project": "08_power_plant_emissions",
+  "sample_mode": false,
+  "artifacts": {
+    "data_audit": 5,
+    "segment_scorecard": 11,
+    "bootstrap_gap": 1,
+    "feature_diagnostics": 11,
+    "temporal_diagnostics": 0,
+    "threshold_sensitivity": 5,
+    "decision_queue": 20,
+    "abatement_pareto": 12612,
+    "peer_scenarios": 37836
+  }
+}

@@ -1,0 +1,7 @@
+# Publisher responses and verified outputs are byte-for-byte evidence.
+# Do not change their line endings on checkout, regardless of core.autocrlf.
+projects/*/data/raw/** -text
+projects/*/data/manual_rebuild/** -text
+
+# Tableau packaged workbooks are ZIP archives.
+*.twbx binary

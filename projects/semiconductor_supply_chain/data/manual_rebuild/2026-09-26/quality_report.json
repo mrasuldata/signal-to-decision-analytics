@@ -1,0 +1,18 @@
+{
+  "rows": 95,
+  "columns": 13,
+  "duplicate_rows": 0,
+  "missing_cells": 117,
+  "missing_rate": 0.094737,
+  "passed": true,
+  "notes": [],
+  "project": "10_semiconductor_supply_chain",
+  "source": "BLS CES and PPI",
+  "sample_mode": false,
+  "snapshot_date": "2026-09-26",
+  "source_sha256": [
+    "305f095cbcb048283afb5d89cd1579eab90cfcdaa32dc02df45060094d63fe11",
+    "293d223075a87f24878c0ae883b9c21afe6bbbb16d2d9aee3b25fc9f116c3bd3",
+    "8b3fc861266090f25cd7dce5ea89bf579801c6718230d63bec8e8939707d8c07"
+  ]
+}

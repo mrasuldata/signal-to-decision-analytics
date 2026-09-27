@@ -1,0 +1,6 @@
+{
+  "url": "https://api.fda.gov/drug/shortages.json?limit=1000&skip=0",
+  "sha256": "8e0cda58e3b53046e11f73919c060911cca841ed4d848eb684d7709a3f33fd99",
+  "bytes": 1900492,
+  "accessed_at": "2026-09-26T04:56:47.712670+00:00"
+}

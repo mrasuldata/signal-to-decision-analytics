@@ -1,0 +1,15 @@
+{
+  "source_url": "https://open.fda.gov/apis/drug/drugshortages/",
+  "coverage": "Listing snapshot; publisher update 2026-09-25",
+  "grain": "Publisher shortage presentation record",
+  "refresh_frequency": "Publisher updates",
+  "reuse_basis": "Public openFDA data; retain FDA disclaimer",
+  "attribution": "US FDA openFDA Drug Shortages",
+  "limitations": "Not medical advice; update dates are not resolution dates",
+  "publisher_total": 1601,
+  "publisher": "US Food and Drug Administration",
+  "direct_url": "https://api.fda.gov/drug/shortages.json?limit=1000&skip=0",
+  "sha256": "8e0cda58e3b53046e11f73919c060911cca841ed4d848eb684d7709a3f33fd99",
+  "bytes": 1900492,
+  "accessed_at": "2026-09-27T00:48:52.383866+00:00"
+}

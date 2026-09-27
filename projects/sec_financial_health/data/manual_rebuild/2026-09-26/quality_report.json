@@ -1,0 +1,16 @@
+{
+  "rows": 1935,
+  "columns": 30,
+  "duplicate_rows": 0,
+  "missing_cells": 2670,
+  "missing_rate": 0.045995,
+  "passed": true,
+  "notes": [],
+  "project": "03_sec_financial_health",
+  "source": "FDIC BankFind financials",
+  "sample_mode": false,
+  "snapshot_date": "2026-09-26",
+  "source_sha256": [
+    "e0cfc6a868a47a684df4d839c387675542f9d821c5a24e91d9eee1c933a5c9b8"
+  ]
+}

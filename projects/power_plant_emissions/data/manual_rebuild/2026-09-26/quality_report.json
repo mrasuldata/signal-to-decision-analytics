@@ -1,0 +1,16 @@
+{
+  "rows": 12612,
+  "columns": 16,
+  "duplicate_rows": 0,
+  "missing_cells": 60166,
+  "missing_rate": 0.298158,
+  "passed": true,
+  "notes": [],
+  "project": "08_power_plant_emissions",
+  "source": "EPA eGRID2023 revision 2",
+  "sample_mode": false,
+  "snapshot_date": "2026-09-26",
+  "source_sha256": [
+    "895cd81dd8662406189ad8adf5a2578dcb362cdb5cff7cca81b10ee6bd2447c6"
+  ]
+}

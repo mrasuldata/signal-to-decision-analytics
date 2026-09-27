@@ -1,0 +1,14 @@
+{
+  "source_url": "https://www.bls.gov/developers/",
+  "coverage": "2024-01-01 through 2026-07-01",
+  "grain": "Series and month",
+  "refresh_frequency": "Monthly, subject to revision",
+  "reuse_basis": "Public US government statistical data",
+  "attribution": "US Bureau of Labor Statistics, CES and PPI",
+  "limitations": "Different industry and worker populations; preliminary figures and revisions. Raw response preserves footnotes.",
+  "publisher": "US Bureau of Labor Statistics",
+  "direct_url": "https://api.bls.gov/publicAPI/v1/timeseries/data/CES3133440007",
+  "sha256": "293d223075a87f24878c0ae883b9c21afe6bbbb16d2d9aee3b25fc9f116c3bd3",
+  "bytes": 2806,
+  "accessed_at": "2026-09-27T04:39:03.595457+00:00"
+}

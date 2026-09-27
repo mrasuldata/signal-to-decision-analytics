@@ -1,0 +1,14 @@
+{
+  "project": "03_sec_financial_health",
+  "sample_mode": false,
+  "artifacts": {
+    "data_audit": 5,
+    "segment_scorecard": 182,
+    "bootstrap_gap": 1,
+    "feature_diagnostics": 12,
+    "temporal_diagnostics": 12,
+    "threshold_sensitivity": 8,
+    "decision_queue": 20,
+    "deposit_outflow_scenario": 176
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "source_url": "https://www.eia.gov/electricity/data/eia861m/",
+  "coverage": "2022-01-01 00:00:00 through 2026-07-01 00:00:00",
+  "grain": "State, sector and month",
+  "refresh_frequency": "Monthly, subject to revisions",
+  "reuse_basis": "Public US government energy statistics",
+  "attribution": "EIA Form 861M",
+  "limitations": "Monthly sales are energy, not coincident peak demand. Preserve preliminary/revised data status; commercial sales do not isolate data centers.",
+  "publisher": "US Energy Information Administration",
+  "direct_url": "https://www.eia.gov/electricity/data/eia861m/xls/sales_revenue.xlsx",
+  "sha256": "f50ac9dcdcb1b8656e543927e9301bbb87288b1821c1d00ffa52e0902e77e4a0",
+  "bytes": 2269132,
+  "accessed_at": "2026-09-27T04:24:17.147077+00:00"
+}

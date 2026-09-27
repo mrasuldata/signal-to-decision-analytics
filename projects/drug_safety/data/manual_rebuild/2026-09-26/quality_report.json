@@ -1,0 +1,17 @@
+{
+  "rows": 1600,
+  "columns": 22,
+  "duplicate_rows": 0,
+  "missing_cells": 3039,
+  "missing_rate": 0.086335,
+  "passed": true,
+  "notes": [],
+  "project": "05_drug_safety",
+  "source": "FDA drug shortages via openFDA",
+  "sample_mode": false,
+  "snapshot_date": "2026-09-26",
+  "source_sha256": [
+    "8e0cda58e3b53046e11f73919c060911cca841ed4d848eb684d7709a3f33fd99",
+    "3b35adcfba6cda8d40587a9d3b9bda1995aa183233b0dd29d930bd3f73ae1264"
+  ]
+}

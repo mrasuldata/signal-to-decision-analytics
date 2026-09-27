@@ -1,0 +1,14 @@
+{
+  "rows": 6558,
+  "columns": 18,
+  "duplicate_rows": 0,
+  "missing_cells": 6558,
+  "missing_rate": 0.055556,
+  "passed": true,
+  "notes": [],
+  "project": "01_consumer_complaints",
+  "source": "Consumer Financial Protection Bureau",
+  "sample_mode": false,
+  "snapshot_date": "2026-09-26",
+  "source_sha256": "37feb23d5c38a641731a592c36dfebb1664097ae03c21bcd03bc39841ffc10d6"
+}

@@ -1,0 +1,16 @@
+{
+  "rows": 275,
+  "columns": 21,
+  "duplicate_rows": 0,
+  "missing_cells": 790,
+  "missing_rate": 0.136797,
+  "passed": true,
+  "notes": [],
+  "project": "07_electricity_affordability",
+  "source": "EIA Form EIA-861M",
+  "sample_mode": false,
+  "snapshot_date": "2026-09-26",
+  "source_sha256": [
+    "f50ac9dcdcb1b8656e543927e9301bbb87288b1821c1d00ffa52e0902e77e4a0"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "rows": 18330,
+  "columns": 20,
+  "duplicate_rows": 0,
+  "missing_cells": 166481,
+  "missing_rate": 0.454122,
+  "passed": true,
+  "notes": [],
+  "project": "04_hospital_readmissions",
+  "source": "CMS Hospital Readmissions Reduction Program",
+  "sample_mode": false,
+  "snapshot_date": "2026-09-26",
+  "source_sha256": [
+    "d5dd538630f79241f3ffbe110bca838b3b20a51d8ffd2251a3382e2c3b8b76bb",
+    "7e7915dd2751a1e59ac46dbc9194fb781e820962a04d47c31344ea2bb30c91f6"
+  ]
+}

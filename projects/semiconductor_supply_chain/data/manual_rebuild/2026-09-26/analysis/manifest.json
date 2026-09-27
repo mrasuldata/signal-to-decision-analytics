@@ -1,0 +1,17 @@
+{
+  "project": "10_semiconductor_supply_chain",
+  "sample_mode": false,
+  "artifacts": {
+    "data_audit": 5,
+    "segment_scorecard": 3,
+    "bootstrap_gap": 1,
+    "feature_diagnostics": 5,
+    "temporal_diagnostics": 32,
+    "threshold_sensitivity": 5,
+    "decision_queue": 20,
+    "divergence_analysis": 32,
+    "aligned_pulse": 96,
+    "lead_lag_screen": 42,
+    "momentum_shift_screen": 3
+  }
+}

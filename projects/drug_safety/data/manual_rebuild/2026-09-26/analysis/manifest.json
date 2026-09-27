@@ -1,0 +1,15 @@
+{
+  "project": "05_drug_safety",
+  "sample_mode": false,
+  "artifacts": {
+    "data_audit": 5,
+    "segment_scorecard": 59,
+    "bootstrap_gap": 1,
+    "feature_diagnostics": 5,
+    "temporal_diagnostics": 14,
+    "threshold_sensitivity": 5,
+    "decision_queue": 20,
+    "concentration_analysis": 70,
+    "record_hhi_sensitivity": 70
+  }
+}

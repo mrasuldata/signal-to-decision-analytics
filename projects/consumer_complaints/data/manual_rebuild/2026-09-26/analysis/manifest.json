@@ -1,0 +1,14 @@
+{
+  "project": "01_consumer_complaints",
+  "sample_mode": false,
+  "artifacts": {
+    "data_audit": 5,
+    "segment_scorecard": 1,
+    "bootstrap_gap": 1,
+    "feature_diagnostics": 4,
+    "temporal_diagnostics": 24,
+    "threshold_sensitivity": 5,
+    "decision_queue": 20,
+    "response_queue_intervals": 1671
+  }
+}

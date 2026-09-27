@@ -1,0 +1,47 @@
+{
+  "publisher": "Consumer Financial Protection Bureau",
+  "direct_url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?date_received_min=2024-01-01&date_received_max=2026-01-01&product=Mortgage&state=PA&state=VA&state=MD&state=DC&state=NJ&format=csv",
+  "query": [
+    [
+      "date_received_min",
+      "2024-01-01"
+    ],
+    [
+      "date_received_max",
+      "2026-01-01"
+    ],
+    [
+      "product",
+      "Mortgage"
+    ],
+    [
+      "state",
+      "PA"
+    ],
+    [
+      "state",
+      "VA"
+    ],
+    [
+      "state",
+      "MD"
+    ],
+    [
+      "state",
+      "DC"
+    ],
+    [
+      "state",
+      "NJ"
+    ],
+    [
+      "format",
+      "csv"
+    ]
+  ],
+  "accessed_at": "2026-09-26T05:09:45.983538+00:00",
+  "bytes": 2014913,
+  "sha256": "37feb23d5c38a641731a592c36dfebb1664097ae03c21bcd03bc39841ffc10d6",
+  "content_type": "text/csv",
+  "publisher_last_modified": null
+}

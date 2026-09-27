@@ -1,0 +1,19 @@
+# Local environments, editor files, and generated caches only.
+# Keep data/raw/, data/manual_rebuild/, notebooks/, and tableau/ tracked.
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+~$*
+*.tmp
+*.temp

@@ -1,0 +1,40 @@
+-- MySQL 8 schema for the checked 03_sec_financial_health Tableau extract.
+-- These are stored notebook results; no calculation is replaced here.
+CREATE DATABASE IF NOT EXISTS portfolio7 CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE portfolio7;
+CREATE TABLE IF NOT EXISTS `p03_bank_financial_health` (
+    `sql_row_id` BIGINT NOT NULL AUTO_INCREMENT,
+    `cert` VARCHAR(32) NOT NULL,
+    `bank_name` VARCHAR(32) NULL,
+    `state` VARCHAR(32) NULL,
+    `report_date` DATETIME NOT NULL,
+    `assets` BIGINT NULL,
+    `deposits` BIGINT NULL,
+    `loans` BIGINT NULL,
+    `equity` DOUBLE NULL,
+    `net_income` DOUBLE NULL,
+    `noncurrent_loans` BIGINT NULL,
+    `reported_roa_pct` DOUBLE NULL,
+    `uninsured_deposits` BIGINT NULL,
+    `cre_loans` DOUBLE NULL,
+    `cash_balances` BIGINT NULL,
+    `deposit_to_asset_pct` DOUBLE NULL,
+    `loan_to_deposit_pct` DOUBLE NULL,
+    `equity_to_asset_pct` DOUBLE NULL,
+    `noncurrent_loan_pct` DOUBLE NULL,
+    `deposit_growth_yoy_pct` DOUBLE NULL,
+    `uninsured_deposit_pct` DOUBLE NULL,
+    `cre_to_asset_pct` DOUBLE NULL,
+    `composite_stress_score` DOUBLE NULL,
+    `watchlist_band` VARCHAR(32) NULL,
+    `deposit_growth_qoq_pct` DOUBLE NULL,
+    `cash_to_asset_pct` DOUBLE NULL,
+    `asset_peer` VARCHAR(32) NULL,
+    `complete_peer_count` BIGINT NULL,
+    `funding_weight_score` DOUBLE NULL,
+    `uninsured_cre_interaction` DOUBLE NULL,
+    `latest_quarter_flag` TINYINT NULL,
+    PRIMARY KEY (`sql_row_id`),
+    UNIQUE KEY `unique_source_row` (`cert`, `report_date`),
+    KEY `idx_source_period` (`report_date`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

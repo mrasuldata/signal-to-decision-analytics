@@ -1,0 +1,14 @@
+{
+  "source_url": "https://banks.data.fdic.gov/docs/",
+  "coverage": "20230331 through 20251231",
+  "grain": "FDIC certificate and report quarter; assets at least $10bn in that quarter",
+  "refresh_frequency": "Quarterly, subject to revisions",
+  "reuse_basis": "Public US government financial statistics",
+  "attribution": "FDIC BankFind Suite",
+  "limitations": "Amended reports and mergers affect comparisons. Cash is not a regulatory liquidity ratio. Investor CRE uses book balances, not regulatory capital definitions.",
+  "publisher": "Federal Deposit Insurance Corporation",
+  "direct_url": "https://banks.data.fdic.gov/api/financials?filters=REPDTE%3A%5B20230331+TO+20251231%5D+AND+ASSET%3A%5B10000000+TO+%2A%5D&fields=CERT%2CREPDTE%2CNAME%2CSTALP%2CASSET%2CDEP%2CLNLSGR%2CNETINC%2CROA%2CEQTOT%2CNCLNLS%2CDEPUNINS%2CLNRECONS%2CLNRENRES%2CLNREMULT%2CLNRENROT%2CLNRENROW%2CCHBAL&limit=10000&format=json",
+  "sha256": "e0cfc6a868a47a684df4d839c387675542f9d821c5a24e91d9eee1c933a5c9b8",
+  "bytes": 705205,
+  "accessed_at": "2026-09-26T23:13:32.104886+00:00"
+}

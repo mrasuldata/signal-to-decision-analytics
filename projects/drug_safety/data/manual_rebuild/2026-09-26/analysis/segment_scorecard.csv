@@ -1,0 +1,60 @@
+therapeutic_category,records,metric_mean,metric_median,risk_score,metric_gap_vs_total,risk_rank
+"Anti-Infective, Ophthalmology",1,572.0,572.0,96.8,-1681.3420138888887,1
+Medical Imaging,15,1004.0,1004.0,87.5,-1249.3420138888887,2
+"Anti-Infective, Pediatric",6,4239.0,4239.0,79.16666666666667,1985.6579861111113,3
+"Analgesia/Addiction, Gastroenterology, Pediatric, Pulmonary/Allergy",8,1040.0,1040.0,78.125,-1213.3420138888887,4
+Ophthalmology,10,2559.0,2559.0,75.0,305.6579861111113,5
+Neurology,43,2409.470588235294,2943.0,73.12941176470588,156.12857434640546,6
+"Neurology, Other",5,1515.0,1515.0,72.5,-738.3420138888887,7
+"Gastroenterology, Other, Pediatric",9,1247.0,1247.0,69.4111111111111,-1006.3420138888887,8
+"Analgesia/Addiction, Pediatric",24,3205.1304347826085,1607.0,66.63913043478261,951.7884208937198,9
+Hematology,25,2833.3333333333335,3238.0,66.63333333333334,579.9913194444448,10
+Oncology,81,1420.1951219512196,1247.0,66.48048780487804,-833.1468919376691,11
+Anti-Infective,86,1500.027027027027,1285.0,66.24324324324324,-753.3149868618616,12
+Cardiovascular,146,2275.5243902439024,2363.0,65.62926829268294,22.18237635501373,13
+Analgesia/Addiction,114,2850.010989010989,3249.0,65.3120879120879,596.6689751221002,14
+"Anesthesia, Pediatric",66,5016.892307692307,5330.0,63.57692307692308,2763.5502938034188,15
+"Anesthesia, Neurology",27,2368.0,2368.0,63.45925925925926,114.65798611111131,16
+Rheumatology,36,1747.75,1746.0,63.125,-505.5920138888887,17
+Gastroenterology,33,2118.0,2118.0,62.9875,-135.3420138888887,18
+"Analgesia/Addiction, Gastroenterology, Other, Pulmonary/Allergy",2,1040.0,1040.0,62.5,-1213.3420138888887,19
+"Oncology, Other",1,1515.0,1515.0,62.5,-738.3420138888887,19
+"Rheumatology, Oncology",14,1293.0,1293.0,62.142857142857146,-960.3420138888887,20
+"Anesthesia, Neurology, Pediatric",19,4437.35294117647,5382.0,61.92352941176471,2184.0109272875816,21
+"Cardiovascular, Pediatric, Renal",10,3246.0,3246.0,60.8,992.6579861111113,22
+Other,21,1613.4285714285713,1768.0,59.528571428571425,-639.9134424603174,23
+Anesthesia,257,2608.5413223140495,3107.0,58.82685950413223,355.1993084251608,24
+"Endocrinology/Metabolism, Gastroenterology, Pediatric",19,3063.0,3351.0,58.392857142857146,809.6579861111113,25
+Endocrinology/Metabolism,37,1166.0,1166.0,58.29999999999999,-1087.3420138888887,26
+"Endocrinology/Metabolism, Gastroenterology, Other, Pediatric",53,1577.6037735849056,1685.0,56.55094339622642,-675.738240303983,27
+Pulmonary/Allergy,10,1058.0,1058.0,56.20000000000001,-1195.3420138888887,28
+Psychiatry,231,1237.9727272727273,1170.0,56.052727272727275,-1015.3692866161614,29
+"Oncology, Pediatric",8,106.0,106.0,55.900000000000006,-2147.3420138888887,30
+"Dermatology, Endocrinology/Metabolism, Gastroenterology, Hematology, Neurology, Oncology, Ophthalmology, Other, Pulmonary/Allergy, Rheumatology",19,2787.0,2787.0,55.0,533.6579861111113,31
+"Endocrinology/Metabolism, Gastroenterology, Pediatric, Total Parenteral Nutrition",12,3888.0,3888.0,55.0,1634.6579861111113,31
+Total Parenteral Nutrition,3,3839.0,3839.0,55.0,1585.6579861111113,31
+"Neurology, Pediatric, Psychiatry",40,1295.575,1296.0,54.2,-957.7670138888886,32
+Renal,25,,,,,
+Antiviral,17,,,,,
+Transplant,11,,,,,
+"Analgesia/Addiction, Neurology, Other",8,,,,,
+"Musculoskeletal, Rheumatology",6,,,,,
+Dermatology,5,,,,,
+"Anti-Infective, Other",4,,,,,
+"Endocrinology/Metabolism, Gastroenterology",4,,,,,
+"Oncology, Renal, Rheumatology",4,,,,,
+"Cardiovascular, Endocrinology/Metabolism",3,,,,,
+"Gastroenterology, Other, Renal",3,,,,,
+Urology,3,,,,,
+"Analgesia/Addiction, Other",2,,,,,
+"Gastroenterology, Other",2,,,,,
+Inborn Errors,2,,,,,
+"Pediatric, Pulmonary/Allergy",2,,,,,
+"Analgesia/Addiction, Cardiovascular",1,,,,,
+"Anti-Infective, Other, Rheumatology",1,,,,,
+"Cardiovascular, Hematology, Neurology",1,,,,,
+"Dermatology, Other",1,,,,,
+"Gastroenterology, Neurology, Other",1,,,,,
+Musculoskeletal,1,,,,,
+"Pulmonary/Allergy, Pediatric",1,,,,,
+Reproductive,1,,,,,

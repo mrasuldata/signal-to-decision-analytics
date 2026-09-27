@@ -1,0 +1,15 @@
+{
+  "project": "04_hospital_readmissions",
+  "sample_mode": false,
+  "artifacts": {
+    "data_audit": 5,
+    "segment_scorecard": 6,
+    "bootstrap_gap": 1,
+    "feature_diagnostics": 12,
+    "temporal_diagnostics": 0,
+    "threshold_sensitivity": 5,
+    "decision_queue": 20,
+    "observed_rate_uncertainty": 18330,
+    "shrinkage_sensitivity": 3
+  }
+}
