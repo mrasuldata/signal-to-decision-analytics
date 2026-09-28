@@ -1,4 +1,4 @@
--- Run after populate.sql for 05_drug_safety; compare with the dated quality report.
+-- Run after load_extract.sql for 05_drug_safety; compare with the dated quality report.
 USE portfolio7;
 SELECT COUNT(*) AS loaded_rows, COUNT(DISTINCT CONCAT_WS('|', `record_id`)) AS distinct_source_keys FROM `p05_drug_safety`;
 -- A zero result is required for each missing-key check below.

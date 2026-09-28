@@ -1,6 +1,6 @@
 # Reproduce the seven analyses, step by step
 
-This is the interview walkthrough for a person who has only this GitHub repository or the ZIP. The CDC NORS project supplied the **lineage pattern and manual SQL handoff**, not the fields or analytical methods for these seven analyses. The calculation flow is visible in each project's `notebooks/manual_lineage.ipynb`; no `.py` module, launcher, configuration file, or background job is needed. Each `sql/` folder now contains a MySQL schema, population, validation, and inspection file. MySQL is a manual second check of saved notebook results, not a prerequisite for calculating them.
+This is the interview walkthrough for a person who has only this GitHub repository or the ZIP. The CDC NORS project supplied the **lineage pattern and manual SQL handoff**, not the fields or analytical methods for these seven analyses. The calculation flow is visible in each project's named analysis notebook under `notebooks/`; no `.py` module, launcher, configuration file, or background job is needed. Each `sql/` folder contains scripts to create the table, load the extract, check the load, and review results. MySQL is a manual second check of saved notebook results, not a prerequisite for calculating them.
 
 ## Choose the run you are demonstrating
 
@@ -11,13 +11,13 @@ The pinned replay needs no Internet connection. A new download needs the publish
 
 ## Start with a clean copy
 
-Use Python 3.13 and the packages listed in [README](README.md). Open a terminal at the **portfolio root** (the folder containing `projects/`), run `jupyter lab`, and open one project's `notebooks/manual_lineage.ipynb`. Keep the notebook's code cells in their supplied order. Run **one code cell at a time**, read its output, and apply the gate below before advancing. Do not use Jupyter's **Run All** for an interview demonstration. The notebook finds its project from the portfolio root, so it does not need a machine-specific file path.
+Use Python 3.13 and the packages listed in [README](README.md). Open a terminal at the **portfolio root** (the folder containing `projects/`), run `jupyter lab`, and open a project's named analysis notebook under `notebooks/`. Keep the notebook's code cells in their supplied order. Run **one code cell at a time**, read its output, and apply the gate below before advancing. Do not use Jupyter's **Run All** for an interview demonstration. The notebook finds its project from the portfolio root, so it does not need a machine-specific file path.
 
 For an exact replay, work on a fresh copy of the ZIP/repository if you want to compare saved files byte for byte without changing your working copy. The supplied dated results are evidence, not a substitute for executing the notebook yourself. Do not commit personal environments, notebook checkpoints, temporary files, or newly downloaded responses until you have reviewed what they contain.
 
 ## The eight visible stages
 
-Each heading below matches a Markdown instruction cell and its immediately following code cell in every `manual_lineage.ipynb`. The notebook's stage code is the corresponding implementation; the `Check` stage adds formal assertions. A manual gate at each stage is also necessary because a technically valid file can still represent the wrong question or cohort.
+Each heading below matches a Markdown instruction cell and its immediately following code cell in every project analysis notebook. The notebook's stage code is the corresponding implementation; the `Check` stage adds formal assertions. A manual gate at each stage is also necessary because a technically valid file can still represent the wrong question or cohort.
 
 | Stage | What the analyst does in the notebook | Visible evidence | Gate before continuing |
 |---|---|---|---|
@@ -34,15 +34,15 @@ The supplied `Decide` cells contain decisions for the pinned response. Treat the
 
 ## Manual MySQL handoff after Save
 
-This follows the CDC reference's `schema.sql` → `populate.sql` → `validation.sql` → `analysis.sql` order. It is a visible, analyst-operated database mirror of the checked `tableau_extract.csv`. The notebook remains the owner of cleaning and calculations. The SQL files do not recreate those formulas or fetch source data. You can finish the notebook and Tableau demonstration without MySQL, but do not claim the SQL part was executed unless you actually ran and checked it.
+This follows the CDC reference's `create_table.sql` → `load_extract.sql` → `check_load.sql` → `review_queries.sql` order. It is a visible, analyst-operated database mirror of the checked `tableau_extract.csv`. The notebook remains the owner of cleaning and calculations. The SQL files do not recreate those formulas or fetch source data. You can finish the notebook and Tableau demonstration without MySQL, but do not claim the SQL part was executed unless you actually ran and checked it.
 
 1. In MySQL Workbench, connect to your local MySQL 8 server and run `SELECT @@secure_file_priv;`. This returns the server-approved upload directory. If it returns `NULL`, stop the SQL demonstration; do not weaken server security settings for this portfolio. Server-side loading also requires the account's `FILE` privilege.
 2. Finish **Source → Import → Transform and clean → Calculate → Check → Save** in one project notebook. Open that run's `quality_report.json` and confirm `passed: true`. Note its row count and the exact run folder. A fresh response can have different numbers from the pinned run.
 3. Copy that run's `tableau_extract.csv` into the directory returned in step 1. Rename **only the copy** to the project filename listed below. Do not edit the saved extract or the publisher response.
-4. Open the project's `sql/schema.sql` in a text editor. Copy all, paste into a Workbench SQL tab, and execute. Confirm the `portfolio7` schema and the project's table appear. Each project has its own table inside this one schema.
-5. Make a temporary copy of `sql/populate.sql` **outside the repository**. In that temporary copy, replace `__MYSQL_SECURE_FILE_PRIV__` with the directory from step 1, using forward slashes. Copy its contents into Workbench and execute. The script truncates only this project's SQL mirror before loading, so a previous run cannot leave stale rows. Never commit the path-edited copy.
-6. Read the Workbench warning output. Then execute `sql/validation.sql`. Loaded rows must equal both the logical CSV record count and `quality_report.json`'s `rows` for this exact run. Distinct source keys must equal loaded rows; missing-key counts must be zero. Check the project-specific query result against its README and saved CSV. A successful load message without these comparisons is insufficient.
-7. Execute `sql/analysis.sql` to inspect stored notebook fields. Project 01 also contains the pre-existing response-queue SQL method cross-check. SQL queries are supporting evidence; the saved notebook results and Tableau extract remain unchanged.
+4. Open the project's `sql/create_table.sql` in a text editor. Copy all, paste into a Workbench SQL tab, and execute. Confirm the `portfolio7` schema and the project's table appear. Each project has its own table inside this one schema.
+5. Make a temporary copy of `sql/load_extract.sql` **outside the repository**. In that temporary copy, replace `__MYSQL_SECURE_FILE_PRIV__` with the directory from step 1, using forward slashes. Copy its contents into Workbench and execute. The script truncates only this project's SQL mirror before loading, so a previous run cannot leave stale rows. Never commit the path-edited copy.
+6. Read the Workbench warning output. Then execute `sql/check_load.sql`. Loaded rows must equal both the logical CSV record count and `quality_report.json`'s `rows` for this exact run. Distinct source keys must equal loaded rows; missing-key counts must be zero. Check the project-specific query result against its README and saved CSV. A successful load message without these comparisons is insufficient.
+7. Execute `sql/review_queries.sql` to inspect stored notebook fields. Project 01 also contains the pre-existing response-queue SQL method cross-check. SQL queries are supporting evidence; the saved notebook results and Tableau extract remain unchanged.
 8. Remove your temporary path-edited SQL copy and any staged server copy when finished, following your local database policy. Do not upload either to GitHub. Continue to **Show → Decide** only after identifying which parts you actually ran.
 
 | Project | Staged CSV copy name | MySQL table | Pinned expected rows |
@@ -63,13 +63,13 @@ These are **2026-09-26 pinned-replay expectations only**. The source and calcula
 
 | Project and notebook | Expected cleaned rows | Principal saved calculation to inspect | Packaged Tableau checkpoint |
 |---|---:|---|---|
-| [Consumer Complaints](projects/consumer_complaints/notebooks/manual_lineage.ipynb) | 6,558 complaint IDs | `analysis/response_queue_intervals.csv`: known-response rates, Wilson intervals, and adjacent-month review signals. | `Executive Dashboard`; full-cohort timely-response rate 98.80%. |
-| [Bank Financial Health](projects/sec_financial_health/notebooks/manual_lineage.ipynb) | 1,935 bank-quarter rows | `analysis/deposit_outflow_scenario.csv` and `analysis/threshold_sensitivity.csv`: screening scenarios, not default probabilities. | `Bank monitor — overview`; latest quarter 159 banks, 148 scored, 2 at the default review threshold. |
-| [Hospital Readmissions](projects/hospital_readmissions/notebooks/manual_lineage.ipynb) | 18,330 facility-measure rows | `analysis/observed_rate_uncertainty.csv`: uncertainty and peer comparison. | `Readmissions — evidence review`; 8,022 scored records, 232 lower-bound signals. |
-| [Drug Safety](projects/drug_safety/notebooks/manual_lineage.ipynb) | 1,600 package records | `analysis/concentration_analysis.csv`: listing-level concentration, not patient harm. | `Drug shortages — status and therapy`; 1,152 Current records. |
-| [Electricity Affordability](projects/electricity_affordability/notebooks/manual_lineage.ipynb) | 275 state-period rows | `analysis/persistence_sensitivity.csv` and `analysis/monthly_pressure_signals.csv`. | `Electricity — commercial growth`; verify the July 2026 endpoint/filter. |
-| [Power Plant Emissions](projects/power_plant_emissions/notebooks/manual_lineage.ipynb) | 12,612 plant rows | `analysis/peer_scenarios.csv` and `analysis/abatement_pareto.csv`: hypothetical opportunity. | `Emissions — opportunity screen`; 3,233 estimable scenarios. |
-| [Semiconductor Supply Chain](projects/semiconductor_supply_chain/notebooks/manual_lineage.ipynb) | 95 series-period rows | `analysis/divergence_analysis.csv`: mixed economic indicators and lag-screen limits. | `Semiconductors — economic pulse`; verify the distinct series dates. |
+| [Consumer Complaints](projects/consumer_complaints/notebooks/consumer_complaints_analysis.ipynb) | 6,558 complaint IDs | `analysis/response_queue_intervals.csv`: known-response rates, Wilson intervals, and adjacent-month review signals. | `Executive Dashboard`; full-cohort timely-response rate 98.80%. |
+| [Bank Financial Health](projects/sec_financial_health/notebooks/sec_financial_health_analysis.ipynb) | 1,935 bank-quarter rows | `analysis/deposit_outflow_scenario.csv` and `analysis/threshold_sensitivity.csv`: screening scenarios, not default probabilities. | `Bank monitor — overview`; latest quarter 159 banks, 148 scored, 2 at the default review threshold. |
+| [Hospital Readmissions](projects/hospital_readmissions/notebooks/hospital_readmissions_analysis.ipynb) | 18,330 facility-measure rows | `analysis/observed_rate_uncertainty.csv`: uncertainty and peer comparison. | `Readmissions — evidence review`; 8,022 scored records, 232 lower-bound signals. |
+| [Drug Safety](projects/drug_safety/notebooks/drug_safety_analysis.ipynb) | 1,600 package records | `analysis/concentration_analysis.csv`: listing-level concentration, not patient harm. | `Drug shortages — status and therapy`; 1,152 Current records. |
+| [Electricity Affordability](projects/electricity_affordability/notebooks/electricity_affordability_analysis.ipynb) | 275 state-period rows | `analysis/persistence_sensitivity.csv` and `analysis/monthly_pressure_signals.csv`. | `Electricity — commercial growth`; verify the July 2026 endpoint/filter. |
+| [Power Plant Emissions](projects/power_plant_emissions/notebooks/power_plant_emissions_analysis.ipynb) | 12,612 plant rows | `analysis/peer_scenarios.csv` and `analysis/abatement_pareto.csv`: hypothetical opportunity. | `Emissions — opportunity screen`; 3,233 estimable scenarios. |
+| [Semiconductor Supply Chain](projects/semiconductor_supply_chain/notebooks/semiconductor_supply_chain_analysis.ipynb) | 95 series-period rows | `analysis/divergence_analysis.csv`: mixed economic indicators and lag-screen limits. | `Semiconductors — economic pulse`; verify the distinct series dates. |
 
 ## Tableau: reproduce and explain the display
 

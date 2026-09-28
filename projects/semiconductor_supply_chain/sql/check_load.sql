@@ -1,4 +1,4 @@
--- Run after populate.sql for 10_semiconductor_supply_chain; compare with the dated quality report.
+-- Run after load_extract.sql for 10_semiconductor_supply_chain; compare with the dated quality report.
 USE portfolio7;
 SELECT COUNT(*) AS loaded_rows, COUNT(DISTINCT CONCAT_WS('|', `period`, `series_id`)) AS distinct_source_keys FROM `p10_semiconductor_supply_chain`;
 -- A zero result is required for each missing-key check below.

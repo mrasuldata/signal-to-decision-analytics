@@ -1,5 +1,5 @@
 -- Manual MySQL population for 10_semiconductor_supply_chain.
--- First run schema.sql. Stage the checked tableau_extract.csv in the
+-- First run create_table.sql. Stage the checked tableau_extract.csv in the
 -- directory returned by SELECT @@secure_file_priv; rename its COPY to
 -- 10_semiconductor_supply_chain.csv. Edit only a temporary copy of this SQL file: replace
 -- __MYSQL_SECURE_FILE_PRIV__ with that directory, using forward slashes.

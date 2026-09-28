@@ -11,7 +11,7 @@ python -m pip install jupyterlab "pandas==3.0.5" "numpy==2.5.1" "scipy==1.18.1" 
 jupyter lab
 ```
 
-Open a project's `notebooks/manual_lineage.ipynb`. Run **one stage at a time** and inspect its visible output and check before continuing. Do not add your local environment or notebook checkpoints to the package.
+Open the project-named analysis notebook in that project's `notebooks/` folder. Run **one stage at a time** and inspect its visible output and check before continuing. Do not add your local environment or notebook checkpoints to the package.
 
 For a complete interview demonstration from a GitHub download or ZIP, follow the [step-by-step lineage walkthrough](LINEAGE_WALKTHROUGH.md). It maps every Source → Decide instruction to the corresponding notebook code cell, expected visible output, stop/check gate, saved evidence, manual MySQL handoff, and Tableau checkpoint.
 
@@ -33,7 +33,7 @@ Each project has a packaged Tableau workbook (`tableau/*.twbx`) with the dated e
 | [Power Plant Emissions](projects/power_plant_emissions/README.md) | EPA eGRID | 12,612 | Notebook abatement table; Tableau emissions screen |
 | [Semiconductor Supply Chain](projects/semiconductor_supply_chain/README.md) | BLS | 95 | Notebook divergence table; Tableau economic pulse |
 
-Project folders use descriptive names without numeric prefixes. Older project IDs remain in SQL table names, staged CSV names, workbook filenames, and saved evidence for traceability; they are not folder paths. Saved notebook figures come from the verified pinned run; path text in those outputs is displayed relative to the portfolio root for portability. Re-running the stages regenerates that display.
+Project folders, notebooks, and Tableau workbooks use descriptive names without numeric prefixes. Older project IDs remain in SQL table names, staged CSV names, and saved evidence for traceability; they are not folder paths. Saved notebook figures come from the verified pinned run; path text in those outputs is displayed relative to the portfolio root for portability. Re-running the stages regenerates that display.
 
 Each project includes the exact pinned response bytes and metadata under `data/raw/`, a tested dated extract and analytical tables under `data/manual_rebuild/2026-09-26/`, and a self-contained manual notebook. The `.body` files in `publisher_responses/` are preserved publisher payloads, not compiled caches. Source URLs, request parameters, SHA-256 values, quality results, and table counts are visible in the notebook and saved evidence. All local references are project-relative; no machine-specific absolute path, credential, configuration file, launcher, or background pipeline is required.
 
@@ -43,6 +43,6 @@ The `Show` stage displays the reproducible analysis in the notebook, and `tablea
 
 ## Manual SQL check
 
-Each project now has `sql/schema.sql`, `sql/populate.sql`, `sql/validation.sql`, `sql/analysis.sql`, and `sql/README.md`, following the CDC reference's visible Workbench sequence. Run these **after** the notebook's Check and Save stages. The schema and population files load a separate MySQL mirror of the checked `tableau_extract.csv`; they do not alter the publisher response, notebook calculations, saved metrics, or Tableau workbook. MySQL is needed only if you choose to demonstrate that database handoff. See the [manual MySQL steps](LINEAGE_WALKTHROUGH.md#manual-mysql-handoff-after-save) before running SQL. A fresh response must be loaded and checked against its own quality report, never compared blindly with the pinned 2026-09-26 figures.
+Each project now has `sql/create_table.sql`, `sql/load_extract.sql`, `sql/check_load.sql`, `sql/review_queries.sql`, and `sql/README.md`, following the CDC reference's visible Workbench sequence. Run these **after** the notebook's Check and Save stages. The schema and population files load a separate MySQL mirror of the checked `tableau_extract.csv`; they do not alter the publisher response, notebook calculations, saved metrics, or Tableau workbook. MySQL is needed only if you choose to demonstrate that database handoff. See the [manual MySQL steps](LINEAGE_WALKTHROUGH.md#manual-mysql-handoff-after-save) before running SQL. A fresh response must be loaded and checked against its own quality report, never compared blindly with the pinned 2026-09-26 figures.
 
 See [source reuse](SOURCE_REUSE.md) for the seven-source permission screen. Attribution is provided for provenance even where not required for reuse.

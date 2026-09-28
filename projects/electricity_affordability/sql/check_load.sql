@@ -1,4 +1,4 @@
--- Run after populate.sql for 07_electricity_affordability; compare with the dated quality report.
+-- Run after load_extract.sql for 07_electricity_affordability; compare with the dated quality report.
 USE portfolio7;
 SELECT COUNT(*) AS loaded_rows, COUNT(DISTINCT CONCAT_WS('|', `period`, `state`, `sector`)) AS distinct_source_keys FROM `p07_electricity_affordability`;
 -- A zero result is required for each missing-key check below.

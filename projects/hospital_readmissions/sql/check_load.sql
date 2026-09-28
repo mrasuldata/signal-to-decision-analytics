@@ -1,4 +1,4 @@
--- Run after populate.sql for 04_hospital_readmissions; compare with the dated quality report.
+-- Run after load_extract.sql for 04_hospital_readmissions; compare with the dated quality report.
 USE portfolio7;
 SELECT COUNT(*) AS loaded_rows, COUNT(DISTINCT CONCAT_WS('|', `facility_id`, `measure_name`)) AS distinct_source_keys FROM `p04_hospital_readmissions`;
 -- A zero result is required for each missing-key check below.
