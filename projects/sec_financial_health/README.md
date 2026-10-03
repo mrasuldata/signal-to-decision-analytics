@@ -1,5 +1,7 @@
 # Bank Financial Health
 
+**Replay qualification (2026-10-03):** in the alternate validation environment described in the top-level README, both the original and updated notebooks produced the same calculations, but they did not exactly reproduce all saved bank results. Differences included two boundary classification labels, scenario row order, and diagnostic correlations. The supplied baseline is preserved. Use the documented dependency versions and compare IDs, values, and categories before claiming exact reproduction; the cause of the baseline differences is not established by the safeguard tests alone.
+
 The [packaged Tableau bank-monitor workbook](tableau/sec_financial_health.twbx) uses the pinned 2026-09-26 extract. Open it after running the manual notebook's Source → Check stages and compare the latest-quarter count (159 banks), scored count (148), and default-threshold review count (2). A review score is a screening signal, not a probability of failure. The workbook is not a live publisher feed.
 
 Source: [FDIC BankFind financials API](https://banks.data.fdic.gov/docs/). The notebook requests the defined 2023-Q1 to 2025-Q4 quarter range for banks meeting its asset threshold. The pinned 2026-09-26 publisher response and its digest are under `data/raw/publisher_responses/`; the verified cleaned extract contains **1,935 bank-quarter rows**.

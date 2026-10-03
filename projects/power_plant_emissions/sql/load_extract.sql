@@ -1,3 +1,5 @@
+-- If secure_file_priv is empty, choose an administrator-approved server directory;
+-- SQL NULL disables this import. See sql/README.md; never substitute an empty path.
 -- Manual MySQL population for 08_power_plant_emissions.
 -- First run create_table.sql. Stage the checked tableau_extract.csv in the
 -- directory returned by SELECT @@secure_file_priv; rename its COPY to

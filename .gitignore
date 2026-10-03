@@ -17,3 +17,6 @@ desktop.ini
 ~$*
 *.tmp
 *.temp
+*.twbr
+# Local exports used by the optional MySQL comparison.
+mysql-export-*.csv
